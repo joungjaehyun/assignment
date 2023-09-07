@@ -1,5 +1,6 @@
 package com.example.assignment.book.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,5 +26,19 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+    @Column(columnDefinition = "default 0")
     private boolean availableForLoan = true;
+
+
+    public void changeTitle(String title) {
+        this.title = title;
+    }
+
+    public void changeAuthor(String author){
+        this.author = author;
+    }
+
+    public void changeAvailableForLoan(boolean availableForLoan){
+        this.availableForLoan = availableForLoan;
+    }
 }

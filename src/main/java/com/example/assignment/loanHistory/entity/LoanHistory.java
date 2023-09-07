@@ -34,4 +34,8 @@ public class LoanHistory {
     private Book book;
     private Date loanDate;
     private Date returnDate;
+
+    public void chReturnDate(Date returnDate){
+        this.returnDate = returnDate;
+    }
 }

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "tbl_member_account")
+@Table(name = "tbl_account")
 @Getter
 @Builder
 @NoArgsConstructor
@@ -29,23 +29,14 @@ public class Account{
     private String email;
 
     private String pw;
-    private String nickname;
 
     private String intro;
 
     private boolean delFlag;
 
-    private String roleName;
-
-    private boolean social;
-
     private String address;
 
 
-
-    public void changeNickname(String nickname) {
-        this.nickname = nickname;
-    }
 
     public void changePw(String pw) {
         this.pw = pw;
@@ -57,10 +48,6 @@ public class Account{
 
     public void delete(){
         this.delFlag = true;
-    }
-
-    public void changeSocialFalse(){
-        this.social = false;
     }
 
     public void changeAddress(String address){
